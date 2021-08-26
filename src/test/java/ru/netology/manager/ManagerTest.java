@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import ru.netology.domain.Book;
 import ru.netology.domain.Product;
 import ru.netology.domain.Smartphone;
-import ru.netology.domain.Something;
 import ru.netology.repository.Repository;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -23,7 +22,6 @@ class ManagerTest {
     Product s3 = new Smartphone(8, "Woodmartphone", 1500, "Russia");
     Product s4 = new Smartphone(9, "Goldensmartphone", 44500, "Germany");
     Product s5 = new Smartphone(10, "Supersmartphone", 13500, "USA");
-    Something g1 = new Something(5,"jhgh",543,"fff");
 
     @BeforeEach
     public void setUp() {
@@ -147,17 +145,4 @@ class ManagerTest {
         assertArrayEquals(expected, actual);
     }
 
-   // @BeforeEach
-   // public void setUp2() {
-  //      manager.add (g1);
-  //  }
-       //Тест для обеспечения тестового покрытия по branch метода searchBy
-       // Не выполняется условие для приведения типа (кастинга)
-     //  @Test
-     //   void shouldsearchByIf2SmartphonesWithManufacturerExist2 () {
-      //      Product[] expected = new Product[]{};
-      //     Product[] actual = manager.searchBy("hgh");
-      //      assertArrayEquals(expected, actual);
-      //  }
-
-    }
+}
