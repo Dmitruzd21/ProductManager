@@ -12,25 +12,23 @@ public class Manager {
         this.repository = repository;
     }
 
-    public Manager () {
-
-    }
 
     public void add(Product product) {
         repository.save(product);
     }
 
 
-    public Product[] findAll () {
-       Product[] result = repository.findAll();
-      return result;
-   }
+    public Product[] findAll() {
+        return repository.findAll();
+    }
 
     public Product[] searchBy(String text) {
         Product[] result = new Product[0];
         for (Product product : repository.findAll()) {
             if (matches(product, text)) {
                 Product[] tmp = new Product[result.length + 1];
+                System.arraycopy(result, 0, tmp, 0, result.length);
+                //(из какого массива, с какого места из источника, куда копировать,с какого места всавлять вцелевой, количество элементов которые хотим скопировать)
                 tmp[tmp.length - 1] = product;
                 result = tmp;
             }
@@ -40,7 +38,7 @@ public class Manager {
 
     public boolean matches(Product product, String search) {
         if (product instanceof Book) { // если в параметре product лежит объект класса Book
-                Book book = (Book) product; // положем его в переменную типа Book чтобы пользоваться методами класса Book
+            Book book = (Book) product; // положем его в переменную типа Book чтобы пользоваться методами класса Book
             if (book.getAuthor().contains(search)) { // проверим есть ли поисковое слово в данных об авторе
                 return true;
             }
@@ -61,7 +59,8 @@ public class Manager {
         }
         return false;
     }
-
 }
+
+
 
 

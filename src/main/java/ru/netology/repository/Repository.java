@@ -18,11 +18,7 @@ public class Repository {
 
     // ***Возвращает весь массив в прямом порядке
     public Product[] findAll() {
-        Product[] result = new Product[products.length];
-        for (int i = 0; i < products.length; i++) {
-            result[i] = products[i];
-        }
-        return result;
+        return products;
     }
 
     // ***Удаление продукта по ID
