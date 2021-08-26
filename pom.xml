@@ -38,8 +38,7 @@
                 <version>0.8.5</version>
                 <configuration>
                     <excludes>
-                        <exclude>ru/netology/repository/**/ExcludedPOJO.class</exclude>
-                        <exclude>ru/netology/repository/**/*DTO.*</exclude>
+                        <exclude>ru/netology/repository/**/Repository.class</exclude>
                         <exclude>**/config/*</exclude>
                     </excludes>
                 </configuration>
