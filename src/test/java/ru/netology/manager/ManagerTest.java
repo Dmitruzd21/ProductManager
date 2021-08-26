@@ -147,17 +147,17 @@ class ManagerTest {
         assertArrayEquals(expected, actual);
     }
 
-    @BeforeEach
-    public void setUp2() {
-        manager.add (g1);
-    }
+   // @BeforeEach
+   // public void setUp2() {
+  //      manager.add (g1);
+  //  }
        //Тест для обеспечения тестового покрытия по branch метода searchBy
        // Не выполняется условие для приведения типа (кастинга)
-       @Test
-        void shouldsearchByIf2SmartphonesWithManufacturerExist2 () {
-            Product[] expected = new Product[]{};
-           Product[] actual = manager.searchBy("hgh");
-            assertArrayEquals(expected, actual);
-        }
+     //  @Test
+     //   void shouldsearchByIf2SmartphonesWithManufacturerExist2 () {
+      //      Product[] expected = new Product[]{};
+      //     Product[] actual = manager.searchBy("hgh");
+      //      assertArrayEquals(expected, actual);
+      //  }
 
     }
