@@ -21,9 +21,10 @@ public class Smartphone extends Product{
     }
 
     public Smartphone(String manufacturer) {
-        this.manufacturer = manufacturer;
+       this.manufacturer = manufacturer;
     }
 
+    @Override
     public boolean matches(String search) {
         if (super.matches(search)) {
             return true;
