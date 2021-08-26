@@ -16,6 +16,10 @@ public class Book extends Product{
         this.author = author;
     }
 
+    public Book() {
+        super();
+    }
+
     public Book(String author) {
         this.author = author;
     }

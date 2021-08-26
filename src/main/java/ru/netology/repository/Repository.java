@@ -26,7 +26,7 @@ public class Repository {
     }
 
     // ***Удаление продукта по ID
-    public void removeById(int id) {g
+    public void removeById(int id) {
         Product[] tmp2 = new Product[products.length - 1];
         int index = 0;
         for (Product product : products) {
