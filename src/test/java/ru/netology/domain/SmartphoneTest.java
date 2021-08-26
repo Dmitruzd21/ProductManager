@@ -6,7 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SmartphoneTest {
 
-    Smartphone smartphone = new Smartphone(6,"VIPSmartphone",345,"Китай");
+    Smartphone smartphone = new Smartphone(6, "VIPSmartphone", 345, "Китай");
+
     @Test
     void shouldmatchesManufacturerAndSearchAreTheSame() {
         boolean actual = smartphone.matches("Китай");

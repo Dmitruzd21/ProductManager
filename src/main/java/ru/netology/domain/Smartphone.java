@@ -1,6 +1,6 @@
 package ru.netology.domain;
 
-public class Smartphone extends Product{
+public class Smartphone extends Product {
     private String manufacturer;
 
     public String getManufacturer() {
@@ -16,16 +16,16 @@ public class Smartphone extends Product{
         this.manufacturer = manufacturer;
     }
 
-    public Smartphone (){
+    public Smartphone() {
         super();
     }
 
     public Smartphone(String manufacturer) {
-       this.manufacturer = manufacturer;
+        this.manufacturer = manufacturer;
     }
 
     @Override
-    public boolean matches(String search) {
+    public boolean gmatches(String search) {
         if (super.matches(search)) {
             return true;
         }

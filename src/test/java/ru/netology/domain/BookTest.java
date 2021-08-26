@@ -7,7 +7,8 @@ import ru.netology.repository.Repository;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BookTest {
-    Book book = new Book(3,"Дама с собачкой",678,"Чехов");
+    Book book = new Book(3, "Дама с собачкой", 678, "Чехов");
+
     @Test
     void shouldmatchesAuthorAndSearchAreTheSame() {
         boolean actual = book.matches("Чехов");
@@ -16,7 +17,7 @@ class BookTest {
 
     @Test
     void shouldmatchesAuthorAndSearchAreNotTheSame() {
-       boolean actual = book.matches("Достоевский");
+        boolean actual = book.matches("Достоевский");
         assertFalse(actual);
     }
 
