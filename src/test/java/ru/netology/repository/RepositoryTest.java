@@ -37,7 +37,7 @@ class RepositoryTest {
 
     @Test
     void shouldThrowNotFoundExeptionIfProductWithIdNotExist() {
-        assertThrows(NotFoundExeption.class, () -> {
+        assertThrows(NotFoundException.class, () -> {
             repository.removeById(7);
         });
     }
