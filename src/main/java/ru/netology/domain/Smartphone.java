@@ -25,7 +25,7 @@ public class Smartphone extends Product {
     }
 
     @Override
-    public boolean gmatches(String search) {
+    public boolean matches(String search) {
         if (super.matches(search)) {
             return true;
         }
